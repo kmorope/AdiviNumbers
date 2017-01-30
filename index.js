@@ -10,6 +10,9 @@ function startGame() {
     } else if (numero < 0) {
         alert('Tu numero no debe ser menor que 0');
         document.getElementsByClassName('numberInput')[0].value = '';
+    } else if (numero == '') {
+        alert('Debes escribir un numero');
+        document.getElementsByClassName('numberInput')[0].value = '';
     } else {
         alert('Empezemos !!!');
         document.getElementsByClassName('numberInput')[0].setAttribute("disabled", "true");
@@ -29,7 +32,7 @@ function binaryAlgorithm(className) {
         numeroPiso = medio;
         medio = parseInt(parseInt(numeroPiso) + parseInt(numeroTecho)) / 2;
         document.getElementsByClassName('minumero')[0].value = medio;
-    }    
+    }
     if (document.getElementsByClassName('numberInput')[0].value == medio) {
         alert('Tu numero es ' + medio + '... Adivine :D');
 
@@ -39,9 +42,15 @@ function binaryAlgorithm(className) {
 
 document.addEventListener('DOMContentLoaded', function () {
     [].forEach.call(document.querySelectorAll('.buttonGame'), function (el) {
-        el.addEventListener('click', function () {
-            console.log(this.classList[1]);
-            binaryAlgorithm(this.classList[1]);
+        el.addEventListener('click', function () { 
+            var numero = document.getElementsByClassName('numberInput')[0].value;
+            if (numero == '') {
+                alert('Debes escribir un numero');
+                document.getElementsByClassName('numberInput')[0].value = '';
+            }else{
+                binaryAlgorithm(this.classList[1]);
+            }
+            
         })
     })
 })

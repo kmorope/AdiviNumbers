@@ -2,25 +2,33 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="index.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>Adivino tu numero entre el 0 y el 1000</h1>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>Adivino tu numero entre el 0 y el 1000</h1>
+    <div class="container">
         <label for="">Tu Numero</label>
-        <input type="number" class="numberInput" onchange="javascript:startGame();">
+        <input type="number" class="numberInput inputText card-1" onchange="javascript:startGame();">
+    </div>
+    <div class="container">
         <label for="">Mi Numero</label>
-        <input type="number" class="minumero" disabled>
+        <input type="number" class="minumero inputText card-1" disabled>
+    </div>
+    <div class="container">
         <input type="button" class="buttonGame menorQue" value="Es menor">
         <input type="button" class="buttonGame mayorQue" value="Es Mayor">
-    </body>
+    </div>
+</body>
 </html>
